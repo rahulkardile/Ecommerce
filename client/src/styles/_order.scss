@@ -1,0 +1,20 @@
+.container {
+    max-width: 850px;
+    width: 100%;
+    margin: auto;
+    overflow: auto;
+
+    h1 {
+        font-weight:100;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 3rem 0;
+        text-align: left;
+
+        &:hover {
+            color: black;
+        }
+
+    }
+
+}

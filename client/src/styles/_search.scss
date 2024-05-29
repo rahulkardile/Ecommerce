@@ -1,0 +1,114 @@
+div.search {
+    padding: 2rem;
+    // @include flex(row, flex-start, stretch, 2rem);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 2rem;
+    min-height: calc(100vh - 6.5vh);
+
+    >form {
+        min-width: 20rem;
+        margin-right: 25px;
+        box-shadow: 0.3px 0px gray;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: 0.5rem;
+
+        >h2 {
+            @include heading;
+            margin-left: 10px;
+            margin-right: 10px;
+
+        }
+
+        >div {
+            margin-left: 10px;
+            margin-right: 20px;
+            font-family: 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif;
+
+            >h4 {
+                margin-bottom: 6px;
+                font-weight: 450;
+            }
+
+            #search {
+                border: 1px solid grey;
+                border-bottom: 0.2px solid gray;
+                background-color: #fff;
+                padding: 1rem;
+                margin-bottom: 1.3rem;
+            }
+
+            >input.i {
+                margin-top: -1rem;
+                margin-bottom: -3rem;
+            }
+
+            >input,
+            >select {
+                margin-top: 10px;
+                width: 100%;
+                padding: 1rem;
+                // border: 1px solid rgba(154, 154, 154, 0.3);
+                border-radius: 5px;
+                margin: 0;
+            }
+
+        }
+
+    }
+
+    >main {
+        width: 100%;
+        padding: 0;
+
+        >h1 {
+            @include heading;
+            
+        }
+
+        >hr{
+            margin-top: 1rem;
+            
+            margin-bottom: 1rem;
+        }
+
+
+        .produsts-cards {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        > article {
+            @include flex;
+
+            >button {
+                @include flex;
+                width: 3rem;
+                padding: 0.75rem;
+                color: white;
+                background-color: darkcyan;
+                border-radius: 5px;
+                outline: none;
+                border: none;
+                &:disabled {
+                    cursor: not-allowed;
+                    opacity: 0.5;
+                    
+                }
+            }
+        }
+    }
+
+}
